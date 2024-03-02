@@ -30,18 +30,15 @@ while True:
                #Isso permite que você armazene todas essas informações juntas, associadas a um número patrimonial específico.
 
 
-
-
     elif opcao == 2:
-        with open("Inventario.csv", "a") as inv:
-            for chave, valor in inventario.items():
-                inv.write(chave + ";" + valor[0] + ";" +
+        with open("Inventario.csv", "a") as inv:#Esta linha abre o arquivo "Inventario.csv" em modo de escrita ("a" significa "append", ou seja, adicionar ao final do arquivo)
+            #utilizando o comando open() dentro de um bloco with. Usar o bloco with garante que o arquivo seja fechado corretamente após o término do bloco,mesmo se ocorrerem exceções 
+              #durante a execução do código.
+            for chave, valor in inventario.items():#Esta linha inicia um loop for que percorre todos os itens do dicionário inventario. Em cada iteração do loop,
+                #a variável chave receberá o número patrimonial e a variável valor receberá a lista de informações associadas a esse número patrimonial.
+                inv.write(chave + ";" + valor[0] + ";" + #escreve uma linha no arquivo CSV para cada item do inventário.
                           valor[1] + ";" + valor[2] + "\n")
-                #with open("Inventario.csv", "a") as inv:: Esta linha abre o arquivo "Inventario.csv" em modo de escrita ("a" significa "append", ou seja, adicionar ao final do arquivo)
-                 #utilizando o comando open() dentro de um bloco with. Usar o bloco with garante que o arquivo seja fechado corretamente após o término do bloco, mesmo se ocorrerem exceções durante a execução do código.
-                 #for chave, valor in inventario.items():: Esta linha inicia um loop for que percorre todos os itens do dicionário inventario. Em cada iteração do loop, a variável chave receberá o número patrimonial e a variável valor receberá a lista de informações associadas a esse número patrimonial.
-                 #inv.write(chave + ";" + valor[0] + ";" + valor[1] + ";" + valor[2] + "\n"): Esta linha escreve uma linha no arquivo CSV para cada item do inventário. Cada linha contém os seguintes campos separados por ponto e vírgula (;):
-                 #Número patrimonial (chave)
+                #Número patrimonial (chave)
                  #Data de atualização (valor[0])
                  #Descrição (valor[1])
                  #Departamento (valor[2])
@@ -49,13 +46,13 @@ while True:
             print("Persistindo com sucesso")
     
     elif opcao == 3:
-        with open("Inventario.csv", "r") as inv:
+        with open("Inventario.csv", "r") as inv:#abre o arquivo "Inventario.csv" em modo de leitura ("r" significa "read") utilizando o comando open() dentro de um bloco with. 
+            #Assim como antes, o bloco with garante que 
+            #o arquivo seja fechado corretamente após a conclusão do bloco.            
             print(inv.readlines())
-    #with open("Inventario.csv", "r") as inv:: Esta linha abre o arquivo "Inventario.csv" em modo de leitura ("r" significa "read") utilizando o comando open() dentro de um bloco with. Assim como antes, o bloco with garante que o arquivo seja fechado corretamente após a conclusão do bloco.
-      #print(inv.readlines()): Esta linha lê todas as linhas do arquivo usando o método readlines() e as imprime usando a função print(). O método readlines() lê todas as linhas do arquivo e retorna uma lista onde cada elemento corresponde a uma linha do arquivo. Então, print() é usado para imprimir essa lista de linhas na saída padrão (normalmente o console).
+            #lê todas as linhas do arquivo usando o método readlines() e as imprime usando a função print(). O método readlines() lê todas as linhas do arquivo e retorna uma 
+            #lista onde cada elemento corresponde a uma linha do arquivo. Então, print() é usado para imprimir essa lista de linhas na saída padrão (normalmente o console).
             
-    
-    
     
     elif opcao == 4:
         break
