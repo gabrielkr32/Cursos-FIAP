@@ -9,7 +9,8 @@ while True:
                 <1> para registrar
                 <2> para persistir em arquivo
                 <3> para exibir ativos armazenados
-                <4> para sair: """))
+                <4> para excluir      
+                <5> para sair: """))
 
     if opcao == 1:
         resposta = "S" #resposta = "S": Inicializa a variável resposta com o valor "S". Essa variável será usada para controlar um loop interno que permite ao usuário 
@@ -53,8 +54,14 @@ while True:
             #lê todas as linhas do arquivo usando o método readlines() e as imprime usando a função print(). O método readlines() lê todas as linhas do arquivo e retorna uma 
             #lista onde cada elemento corresponde a uma linha do arquivo. Então, print() é usado para imprimir essa lista de linhas na saída padrão (normalmente o console).
             
-    
     elif opcao == 4:
+        os.remove()  inventario[numero_patrimonial, data_atualizacao, descricao, departamento]
+        print("Arquivo deletado com sucesso! ")
+    
+
+
+
+    elif opcao == 5:
         break
     else:
         print("Opção inválida. Por favor, escolha uma opção válida.")

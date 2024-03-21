@@ -1,4 +1,4 @@
-with open("arquivo_de_testeAQ1", "r") as arquivo:
+with open("arquivo_de_testeAQ1" "r") as arquivo:
     conteudo=arquivo.readlines()
 print("Tipo de dado da variavel", type(conteudo))
 print("Conteudo do arquivo: ", conteudo)

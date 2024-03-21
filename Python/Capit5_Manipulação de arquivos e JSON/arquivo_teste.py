@@ -1,5 +1,3 @@
-arquivo = open ( "arquivo_de_testeAQ1", "w" )
+with open ("primeiro arquivo. txt", "a") as arquivo:
+    arquivo.write('\ Relembrnado conceitos de manipulação de arquivo ')  
 
-arquivo.write("Meu primeiro arquivo, ai que tudo!")
-
-arquivo.close
